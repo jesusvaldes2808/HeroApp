@@ -28,9 +28,9 @@ export class AuthService {
     )
    }
 
-   chechAuthenticatio(): Observable<boolean> | boolean {
+   chechAuthentication(): Observable<boolean> {
 
-    if( !localStorage.getItem('token')) return false;
+    if( !localStorage.getItem('token')) return of (false);
 
     const token = localStorage.getItem('token');
 
